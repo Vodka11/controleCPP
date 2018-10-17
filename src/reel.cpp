@@ -9,10 +9,13 @@ int i;
 int j;
 int k;
 int l;
+int m;
+int n;
 
 string menu;
 float enter;
 float del;
+float tri = 0;
 
 vector <float> numbers(0);
 
@@ -35,9 +38,24 @@ cout<<"vous avez entré les nombres suivants : "<<endl;
 
 for(j=0; j<numbers.size(); j++){
 cout<<numbers[j]<<endl;
-
-
 }
+
+
+cout<<"affichage après tri"<<endl;
+
+for(m=0; m<numbers.size(); m++){
+for(n=1; n<numbers.size(); n++){
+if(numbers[m] > numbers[n]){
+numbers[n] = tri;
+numbers[m] = numbers[n];
+tri = numbers[m];
+}
+m++;
+}
+n++;
+cout<<numbers[j]<<endl;
+}
+
 
 cout<<"appuyez sur la lettre a pour supprimer un nombre"<<endl;
 cin>>menu;
